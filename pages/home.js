@@ -6,7 +6,8 @@ export default function Offers() {
     <PushNotificationLayout>
       <div className={styles.container}>
         <main className={styles.main}>
-          <h2>Offers Page</h2>
+          <h2>Home page
+          </h2>
           <p>50% discount on T shirts</p>
         </main>
       </div>
