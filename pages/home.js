@@ -8,7 +8,7 @@ export default function Offers() {
         <main className={styles.main}>
           <h2>Home page
           </h2>
-          <p>50% discount on T shirts</p>
+          <p>Notifications</p>
         </main>
       </div>
     </PushNotificationLayout>
