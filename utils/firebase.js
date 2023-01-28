@@ -7,13 +7,12 @@ const firebaseCloudMessaging = {
     if (!firebase?.apps?.length) {
       // Initialize the Firebase app with the credentials
       firebase?.initializeApp({
-        apiKey: "AIzaSyB1UhN_JB7B5ouUP19cZssIICx8IGT36jg",
-        authDomain: "herat-exchange-app-2f0be.firebaseapp.com",
-        projectId: "herat-exchange-app-2f0be",
-        storageBucket: "herat-exchange-app-2f0be.appspot.com",
-        messagingSenderId: "70882756300",
-        appId: "1:70882756300:web:cb5191038147464b4e2469",
-        measurementId: "G-M605QJ8DDB",
+        apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+        authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+        projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+        storageBucket:process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+        appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
       });
 
       try {
@@ -30,7 +29,7 @@ const firebaseCloudMessaging = {
         if (status && status === "granted") {
           // Get new token from Firebase
           const fcm_token = await messaging.getToken({
-            vapidKey: "BDz5RNUS0HMGnRS6PhewLB8PKncCguap9zGwMyvILdPep91VcQxkETIs1nch_Nw8JyBBDySdXs8-hdTvJnyAbuk",
+            vapidKey: process.eventNames.NEXT_PUBLIC_FIREBASE_VAPIDKEY,
           });
 
           // Set token in our local storage
